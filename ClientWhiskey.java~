@@ -1,0 +1,32 @@
+abstract class Whiskey{
+    abstract public double getNrCalorii(double mililitri);
+    abstract public double getConcetratieAlcool();
+    abstract public String toString();
+}
+
+class ClassicWhiskey extends Whiskey{
+    private String nume;
+    private double alcool;
+
+    public ClassicWhiskey(String nume, double alcool){
+	this.nume = nume;
+	this,alcool = alcool;
+    }
+
+    public double getNrCalorii(double mililitri){
+	return alcool * mililitri * 5;
+    }
+    public double getConcetratieAlcool(){
+	return alcool;
+    }
+    
+    public String toString(){
+	return this.nume+", Concetratie alcool: "+ this.getNrCalorii() +", Concetratie alcool pentru 100ml " + this.getConcetratieAlcool(100);
+    }
+}
+
+class ClientWhiskey{
+    public static void main(String[] args){
+	
+    }
+}
